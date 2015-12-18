@@ -28,11 +28,11 @@ remote_file im_zip_file do
   action :create
 end
 
-#remote_file ihs_zip_file do
-#  source ihs_s3_url
-#  mode '0755'
-#  action :create
-#end
+remote_file ihs_zip_file do
+  source ihs_s3_url
+  mode '0755'
+  action :create
+end
 
 execute "unpack #{ihs_zip_file}" do
   cwd ihs_zip_dir
